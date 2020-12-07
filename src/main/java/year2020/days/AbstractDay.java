@@ -46,4 +46,19 @@ public abstract class AbstractDay extends Day {
         return list;
     }
 
+    public List<String> getDataInputOfString(String fileName) {
+        List<String> list = new ArrayList<>();
+        try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
+            while (fileReader.ready()) {
+                String line = fileReader.readLine();
+                list.add(line);
+            }
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+
+        return list;
+    }
+
 }
