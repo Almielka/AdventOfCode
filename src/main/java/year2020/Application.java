@@ -3,6 +3,7 @@ package year2020;
 import year2020.days.AbstractDay;
 import year2020.days.Day01;
 import year2020.days.Day02;
+import year2020.days.Day03;
 
 import java.util.List;
 
@@ -14,7 +15,8 @@ import java.util.List;
 public class Application {
     private static final List<AbstractDay> DAYS = List.of(
             new Day01(),
-            new Day02()
+            new Day02(),
+            new Day03()
     );
 
     public static void main(String[] args) {
