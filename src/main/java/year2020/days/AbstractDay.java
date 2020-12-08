@@ -20,9 +20,9 @@ public abstract class AbstractDay extends Day {
         super(YEAR, day);
     }
 
-    public abstract void solvePart1();
+    public abstract String solvePart1();
 
-    public abstract void solvePart2();
+    public abstract String solvePart2();
 
     public abstract int getDay();
 

@@ -13,5 +13,8 @@ public abstract class Day {
         this.year = year;
         this.day = day;
     }
+
+    public abstract String solvePart1();
+    public abstract String solvePart2();
 }
 

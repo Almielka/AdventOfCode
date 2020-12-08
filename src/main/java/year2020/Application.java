@@ -19,10 +19,8 @@ public class Application {
 
     public static void main(String[] args) {
         DAYS.forEach(day -> {
-            System.out.print("Day " + day.getDay() + ", Part 1: ");
-            day.solvePart1();
-            System.out.print("Day " + day.getDay() + ", Part 2: ");
-            day.solvePart2();
+            System.out.println("Day " + day.getDay() + ", Part 1: " + day.solvePart1());
+            System.out.println("Day " + day.getDay() + ", Part 2: " + day.solvePart2());
         });
     }
 }

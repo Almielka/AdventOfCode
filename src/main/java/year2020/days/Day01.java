@@ -1,4 +1,5 @@
 package year2020.days;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,43 +51,43 @@ public class Day01 extends AbstractDay {
     }
 
     @Override
-    public int getDay(){
+    public int getDay() {
         return DAY;
     }
 
     @Override
-    public void solvePart1() {
-        findTwoNumbersThenMultiply(getDataInputOfInteger(INPUT), SUM).forEach(System.out::println);
+    public String solvePart1() {
+        return String.valueOf(findTwoNumbersThenMultiply(getDataInputOfInteger(INPUT), SUM));
     }
 
     @Override
-    public void solvePart2() {
-        findThreeNumbersThenMultiply(getDataInputOfInteger(INPUT), SUM).forEach(System.out::println);
+    public String solvePart2() {
+        return String.valueOf(findThreeNumbersThenMultiply(getDataInputOfInteger(INPUT), SUM));
     }
 
-    private static List<Integer> findTwoNumbersThenMultiply(List<Integer> list, int value) {
-        List<Integer> resultList = new ArrayList<>();
-        for (int i = list.size() - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if ((list.get(i) + list.get(j)) == value) {
-                    resultList.add(list.get(i) * list.get(j));
-                }
+    private int findTwoNumbersThenMultiply(List<Integer> list, int value) {
+        List<Integer> tmpList = new ArrayList<>();
+        int result = 0;
+        for (Integer i : list) {
+            int tmpInt = value - i;
+            if (tmpList.contains(tmpInt)) {
+                result = i * tmpInt;
             }
-
+            tmpList.add(i);
         }
-        return resultList;
+        return result;
     }
 
-    private static List<Integer> findThreeNumbersThenMultiply(List<Integer> list, int value) {
-        List<Integer> resultList = new ArrayList<>();
+    private int findThreeNumbersThenMultiply(List<Integer> list, int value) {
+        int result = 0;
         for (int i = 0; i < list.size() - 2; i++) {
             int tmp = value - list.get(i);
-            List<Integer> tmpList = findTwoNumbersThenMultiply(list.subList(i + 1, list.size()), tmp);
-            if (tmpList.size() != 0) {
-                resultList.add(list.get(i) * tmpList.get(0));
+            int resultTwoNumbers = findTwoNumbersThenMultiply(list.subList(i + 1, list.size()), tmp);
+            if (resultTwoNumbers != 0) {
+                result = list.get(i) * resultTwoNumbers;
             }
         }
-        return resultList;
+        return result;
     }
 
 }

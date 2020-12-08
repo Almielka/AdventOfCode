@@ -48,8 +48,6 @@ package year2020.days;
 public class Day02 extends AbstractDay {
     private static final String INPUT = "src/main/resources/year2020/day-02-input.txt";
     private static final int DAY = 2;
-    private static int countValid1 = 0;
-    private static int countValid2 = 0;
 
     public Day02() {
         super(DAY);
@@ -60,38 +58,34 @@ public class Day02 extends AbstractDay {
     }
 
     @Override
-    public void solvePart1() {
-        getDataInputOfString(INPUT).forEach(v -> getCountValid1(parseString(v)));
-        System.out.println(countValid1);
+    public String solvePart1() {
+        return String.valueOf(getDataInputOfString(INPUT).stream().
+                filter(line -> isValidPart1(parseString(line))).count());
     }
 
     @Override
-    public void solvePart2() {
-        getDataInputOfString(INPUT).forEach(v -> getCountValid2(parseString(v)));
-        System.out.println(countValid2);
+    public String solvePart2() {
+        return String.valueOf(getDataInputOfString(INPUT).stream().
+                filter(line -> isValidPart2(parseString(line))).count());
     }
 
-    public String[] parseString(String str) {
+    private String[] parseString(String str) {
         String[] arrParts = str.split(" ");
         String[] arrRules = arrParts[0].split("-");
         return new String[]{arrRules[0], arrRules[1], String.valueOf(arrParts[1].charAt(0)), arrParts[2]};
     }
 
-    private void getCountValid1(String[] arr) {
+    private boolean isValidPart1(String[] arr) {
         long countLetter = arr[3].chars().filter(v -> v == arr[2].charAt(0)).count();
-        if (countLetter >= Integer.parseInt(arr[0]) && countLetter <= Integer.parseInt(arr[1])) {
-            countValid1++;
-        }
+        return countLetter >= Integer.parseInt(arr[0]) && countLetter <= Integer.parseInt(arr[1]);
     }
 
-    private void getCountValid2(String[] arr) {
+    private boolean isValidPart2(String[] arr) {
         char letter = arr[2].charAt(0);
         char[] arrPassword = arr[3].toCharArray();
         char char1 = arrPassword[Integer.parseInt(arr[0]) - 1];
         char char2 = arrPassword[Integer.parseInt(arr[1]) - 1];
-        if (char1 != char2 && (char1 == letter || char2 == letter)) {
-            countValid2++;
-        }
+        return char1 != char2 && (char1 == letter || char2 == letter);
     }
 
 }
