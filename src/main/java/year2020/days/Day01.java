@@ -42,7 +42,6 @@ import java.util.List;
 
 public class Day01 extends AbstractDay {
 
-    private static final String INPUT = "src/main/resources/year2020/day-01-input.txt";
     private static final int SUM = 2020;
     private static final int DAY = 1;
 
@@ -57,12 +56,12 @@ public class Day01 extends AbstractDay {
 
     @Override
     public String solvePart1() {
-        return String.valueOf(findTwoNumbersThenMultiply(getDataInputOfInteger(INPUT), SUM));
+        return String.valueOf(findTwoNumbersThenMultiply(getDataInputOfInteger(DAY), SUM));
     }
 
     @Override
     public String solvePart2() {
-        return String.valueOf(findThreeNumbersThenMultiply(getDataInputOfInteger(INPUT), SUM));
+        return String.valueOf(findThreeNumbersThenMultiply(getDataInputOfInteger(DAY), SUM));
     }
 
     private int findTwoNumbersThenMultiply(List<Integer> list, int value) {

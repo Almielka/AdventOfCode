@@ -46,7 +46,7 @@ package year2020.days;
  */
 
 public class Day02 extends AbstractDay {
-    private static final String INPUT = "src/main/resources/year2020/day-02-input.txt";
+
     private static final int DAY = 2;
 
     public Day02() {
@@ -59,13 +59,13 @@ public class Day02 extends AbstractDay {
 
     @Override
     public String solvePart1() {
-        return String.valueOf(getDataInputOfString(INPUT).stream().
+        return String.valueOf(getDataInputOfString(DAY).stream().
                 filter(line -> isValidPart1(parseString(line))).count());
     }
 
     @Override
     public String solvePart2() {
-        return String.valueOf(getDataInputOfString(INPUT).stream().
+        return String.valueOf(getDataInputOfString(DAY).stream().
                 filter(line -> isValidPart2(parseString(line))).count());
     }
 

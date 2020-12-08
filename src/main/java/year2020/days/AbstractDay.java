@@ -15,6 +15,7 @@ import java.util.List;
 
 public abstract class AbstractDay extends Day {
     private static final int YEAR = 2020;
+    private static final String INPUT = "src/main/resources/year2020/day-00-input.txt";
 
     public AbstractDay(int day) {
         super(YEAR, day);
@@ -26,7 +27,8 @@ public abstract class AbstractDay extends Day {
 
     public abstract int getDay();
 
-    public List<Integer> getDataInputOfInteger(String fileName) {
+    public List<Integer> getDataInputOfInteger(int day) {
+        String fileName = getFileName(day);
         List<Integer> list = new ArrayList<>();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
             while (fileReader.ready()) {
@@ -46,7 +48,8 @@ public abstract class AbstractDay extends Day {
         return list;
     }
 
-    public List<String> getDataInputOfString(String fileName) {
+    public List<String> getDataInputOfString(int day) {
+        String fileName = getFileName(day);
         List<String> list = new ArrayList<>();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
             while (fileReader.ready()) {
@@ -59,6 +62,11 @@ public abstract class AbstractDay extends Day {
         }
 
         return list;
+    }
+
+    private String getFileName(int day) {
+        String dayString = String.valueOf(day);
+        return INPUT.replace("00", (dayString.length() == 1) ? "0" + dayString : dayString);
     }
 
 }
