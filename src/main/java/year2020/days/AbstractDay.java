@@ -5,6 +5,8 @@ import shared.Day;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,6 +64,18 @@ public abstract class AbstractDay extends Day {
         }
 
         return list;
+    }
+
+    public String getStringFromInput(int day) {
+        String fileName = getFileName(day);
+        String getData = "";
+        try {
+            getData = Files.readString(Paths.get(fileName));
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+        return getData;
     }
 
     private String getFileName(int day) {
