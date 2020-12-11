@@ -19,7 +19,7 @@ public class Application {
 
         for (int i = 1; i <= 4; i++) { //i will be increased up to 25
             String day = (i < 10) ? "0" + i : String.valueOf(i);
-            days.add((AbstractDay) Class.forName("year2020.days.Day" + day).getConstructor().newInstance());
+            days.add((AbstractDay) Class.forName("year2020.days.day" + day + ".Day" + day).getConstructor().newInstance());
         }
 
         days.forEach(day -> {

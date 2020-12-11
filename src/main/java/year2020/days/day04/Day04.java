@@ -1,4 +1,6 @@
-package year2020.days;
+package year2020.days.day04;
+
+import year2020.days.AbstractDay;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -9,9 +11,7 @@ import java.util.stream.Stream;
 /**
  * @author Anna S. Almielka
  * 10.12.2020
- * Get Task from {@link /resources/year2020/day-04-input.txt}
  */
-
 
 public class Day04 extends AbstractDay {
 
