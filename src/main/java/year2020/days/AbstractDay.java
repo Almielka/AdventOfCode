@@ -29,7 +29,7 @@ public abstract class AbstractDay extends Day {
 
     public abstract int getDay();
 
-    public List<Integer> getDataInputOfInteger(int day) {
+    public List<Integer> getListOfIntegerFromInput(int day) {
         String fileName = getFileName(day);
         List<Integer> list = new ArrayList<>();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
@@ -50,7 +50,7 @@ public abstract class AbstractDay extends Day {
         return list;
     }
 
-    public List<String> getDataInputOfString(int day) {
+    public List<String> getListOfStringFromInput(int day) {
         String fileName = getFileName(day);
         List<String> list = new ArrayList<>();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {

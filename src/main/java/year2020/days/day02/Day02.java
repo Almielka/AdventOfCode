@@ -20,13 +20,13 @@ public class Day02 extends AbstractDay {
 
     @Override
     public String solvePart1() {
-        return String.valueOf(getDataInputOfString(DAY).stream().
+        return String.valueOf(getListOfStringFromInput(DAY).stream().
                 filter(line -> isValidPart1(parseString(line))).count());
     }
 
     @Override
     public String solvePart2() {
-        return String.valueOf(getDataInputOfString(DAY).stream().
+        return String.valueOf(getListOfStringFromInput(DAY).stream().
                 filter(line -> isValidPart2(parseString(line))).count());
     }
 

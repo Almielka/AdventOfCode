@@ -26,12 +26,12 @@ public class Day01 extends AbstractDay {
 
     @Override
     public String solvePart1() {
-        return String.valueOf(findTwoNumbersThenMultiply(getDataInputOfInteger(DAY), SUM));
+        return String.valueOf(findTwoNumbersThenMultiply(getListOfIntegerFromInput(DAY), SUM));
     }
 
     @Override
     public String solvePart2() {
-        return String.valueOf(findThreeNumbersThenMultiply(getDataInputOfInteger(DAY), SUM));
+        return String.valueOf(findThreeNumbersThenMultiply(getListOfIntegerFromInput(DAY), SUM));
     }
 
     private int findTwoNumbersThenMultiply(List<Integer> list, int value) {

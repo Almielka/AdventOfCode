@@ -23,12 +23,12 @@ public class Day03 extends AbstractDay {
 
     @Override
     public String solvePart1() {
-        return String.valueOf(countTreesInForest(getDataInputOfString(DAY), 3, 1));
+        return String.valueOf(countTreesInForest(getListOfStringFromInput(DAY), 3, 1));
     }
 
     @Override
     public String solvePart2() {
-        List<String> forest = getDataInputOfString(DAY);
+        List<String> forest = getListOfStringFromInput(DAY);
         int countAll = countTreesInForest(forest, 1, 1);
         countAll *= countTreesInForest(forest, 3, 1);
         countAll *= countTreesInForest(forest, 5, 1);
