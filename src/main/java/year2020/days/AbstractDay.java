@@ -27,8 +27,6 @@ public abstract class AbstractDay extends Day {
 
     public abstract String solvePart2();
 
-    public abstract int getDay();
-
     public List<Integer> getListOfIntegerFromInput(int day) {
         String fileName = getFileName(day);
         List<Integer> list = new ArrayList<>();

@@ -32,11 +32,6 @@ public class Day04 extends AbstractDay {
     }
 
     @Override
-    public int getDay() {
-        return DAY;
-    }
-
-    @Override
     public String solvePart1() {
         return String.valueOf(
                 parseStringToStream(getStringFromInput(DAY))

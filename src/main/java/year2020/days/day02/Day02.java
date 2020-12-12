@@ -14,10 +14,6 @@ public class Day02 extends AbstractDay {
         super(DAY);
     }
 
-    public int getDay() {
-        return DAY;
-    }
-
     @Override
     public String solvePart1() {
         return String.valueOf(getListOfStringFromInput(DAY).stream().

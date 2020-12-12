@@ -21,14 +21,8 @@ public class Day05 extends AbstractDay {
     private static final char L = 76;
     private static final char R = 82;
 
-
     public Day05() {
         super(DAY);
-    }
-
-    @Override
-    public int getDay() {
-        return DAY;
     }
 
     @Override

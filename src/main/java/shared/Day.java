@@ -14,6 +14,10 @@ public abstract class Day {
         this.day = day;
     }
 
+    public int getDay() {
+        return day;
+    }
+
     public abstract String solvePart1();
     public abstract String solvePart2();
 }

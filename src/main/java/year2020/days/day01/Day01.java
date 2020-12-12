@@ -20,11 +20,6 @@ public class Day01 extends AbstractDay {
     }
 
     @Override
-    public int getDay() {
-        return DAY;
-    }
-
-    @Override
     public String solvePart1() {
         return String.valueOf(findTwoNumbersThenMultiply(getListOfIntegerFromInput(DAY), SUM));
     }

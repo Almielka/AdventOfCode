@@ -21,11 +21,6 @@ public class Day06 extends AbstractDay {
     }
 
     @Override
-    public int getDay() {
-        return DAY;
-    }
-
-    @Override
     public String solvePart1() {
         return String.valueOf(Arrays.stream(getStringFromInput(DAY)
                 .split("\r\n\r\n"))

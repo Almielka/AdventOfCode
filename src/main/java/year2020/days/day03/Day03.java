@@ -17,10 +17,6 @@ public class Day03 extends AbstractDay {
         super(DAY);
     }
 
-    public int getDay() {
-        return DAY;
-    }
-
     @Override
     public String solvePart1() {
         return String.valueOf(countTreesInForest(getListOfStringFromInput(DAY), 3, 1));
