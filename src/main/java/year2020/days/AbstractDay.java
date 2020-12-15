@@ -44,7 +44,27 @@ public abstract class AbstractDay extends Day {
                 IOException e) {
             e.printStackTrace();
         }
+        return list;
+    }
 
+
+    public List<Long> getListOfLongFromInput(int day) {
+        String fileName = getFileName(day);
+        List<Long> list = new ArrayList<>();
+        try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
+            while (fileReader.ready()) {
+                String line = fileReader.readLine();
+                try {
+                    Long number = Long.parseLong(line);
+                    list.add(number);
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
         return list;
     }
 
@@ -60,7 +80,6 @@ public abstract class AbstractDay extends Day {
                 IOException e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
