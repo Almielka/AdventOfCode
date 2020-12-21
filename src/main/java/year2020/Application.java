@@ -24,8 +24,8 @@ public class Application {
         }
 
         days.forEach(day -> {
-            System.out.println("Day " + day.getDay() + ", Part 1: " + day.solvePart1());
-            System.out.println("Day " + day.getDay() + ", Part 2: " + day.solvePart2());
+            System.out.println("Day " + day.getDay() + ", Part 1: " + day.solvePart1(String.valueOf(day.getDay())));
+            System.out.println("Day " + day.getDay() + ", Part 2: " + day.solvePart2(String.valueOf(day.getDay())));
         });
 
     }

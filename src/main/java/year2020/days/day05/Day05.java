@@ -26,13 +26,13 @@ public class Day05 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(Collections.max(getIds()));
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(Collections.max(getIds(puzzleInput)));
     }
 
     @Override
-    public String solvePart2() {
-        List<Integer> ids = getIds();
+    public String solvePart2(String puzzleInput) {
+        List<Integer> ids = getIds(puzzleInput);
         Set<Integer> missedIds = IntStream.rangeClosed(Collections.min(ids), Collections.max(ids)).boxed().collect(Collectors.toSet());
         missedIds.removeAll(ids);
         return String.valueOf(missedIds.stream().findFirst().orElse(-1));
@@ -58,8 +58,8 @@ public class Day05 extends AbstractDay2020 {
         return rowEnd * 8 + columnEnd;
     }
 
-    private List<Integer> getIds() {
-        return getListOfStringFromInput(DAY).stream()
+    private List<Integer> getIds(String puzzleInput) {
+        return getListOfStringFromInput(puzzleInput).stream()
                 .map(this::parseString).collect(Collectors.toList());
     }
 

@@ -22,13 +22,13 @@ public class Day08 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(getAccumulatorFromFalseLoop(parseStringToList(getStringFromInput(DAY))).get(false));
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(getAccumulatorFromFalseLoop(parseStringToList(getStringFromInput(puzzleInput))).get(false));
     }
 
     @Override
-    public String solvePart2() {
-        return String.valueOf(getAccumulatorFromCorrectLoop(parseStringToList(getStringFromInput(DAY))).get(true));
+    public String solvePart2(String puzzleInput) {
+        return String.valueOf(getAccumulatorFromCorrectLoop(parseStringToList(getStringFromInput(puzzleInput))).get(true));
     }
 
     private List<Instruction> parseStringToList(String str) {

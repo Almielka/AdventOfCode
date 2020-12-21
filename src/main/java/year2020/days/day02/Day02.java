@@ -15,14 +15,14 @@ public class Day02 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(getListOfStringFromInput(DAY).stream().
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(getListOfStringFromInput(puzzleInput).stream().
                 filter(line -> isValidPart1(parseString(line))).count());
     }
 
     @Override
-    public String solvePart2() {
-        return String.valueOf(getListOfStringFromInput(DAY).stream().
+    public String solvePart2(String puzzleInput) {
+        return String.valueOf(getListOfStringFromInput(puzzleInput).stream().
                 filter(line -> isValidPart2(parseString(line))).count());
     }
 

@@ -18,13 +18,13 @@ public class Day03 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(countTreesInForest(getListOfStringFromInput(DAY), 3, 1));
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(countTreesInForest(getListOfStringFromInput(puzzleInput), 3, 1));
     }
 
     @Override
-    public String solvePart2() {
-        List<String> forest = getListOfStringFromInput(DAY);
+    public String solvePart2(String puzzleInput) {
+        List<String> forest = getListOfStringFromInput(puzzleInput);
         int countAll = countTreesInForest(forest, 1, 1);
         countAll *= countTreesInForest(forest, 3, 1);
         countAll *= countTreesInForest(forest, 5, 1);

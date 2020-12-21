@@ -28,14 +28,14 @@ public class Day07 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        countRoots(parseStringToMap(getStringFromInput(DAY)), SHINY);
+    public String solvePart1(String puzzleInput) {
+        countRoots(parseStringToMap(getStringFromInput(puzzleInput)), SHINY);
         return String.valueOf(count);
     }
 
     @Override
-    public String solvePart2() {
-        return String.valueOf(countNested(parseStringToMap(getStringFromInput(DAY)), SHINY) - 1);
+    public String solvePart2(String puzzleInput) {
+        return String.valueOf(countNested(parseStringToMap(getStringFromInput(puzzleInput)), SHINY) - 1);
     }
 
     private Map<String, Map<String, Integer>> parseStringToMap(String data) {

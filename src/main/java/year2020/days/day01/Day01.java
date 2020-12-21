@@ -20,13 +20,13 @@ public class Day01 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(findTwoNumbersThenMultiply(getListOfIntegerFromInput(DAY), SUM));
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(findTwoNumbersThenMultiply(getListOfIntegerFromInput(puzzleInput), SUM));
     }
 
     @Override
-    public String solvePart2() {
-        return String.valueOf(findThreeNumbersThenMultiply(getListOfIntegerFromInput(DAY), SUM));
+    public String solvePart2(String puzzleInput) {
+        return String.valueOf(findThreeNumbersThenMultiply(getListOfIntegerFromInput(puzzleInput), SUM));
     }
 
     private int findTwoNumbersThenMultiply(List<Integer> list, int value) {

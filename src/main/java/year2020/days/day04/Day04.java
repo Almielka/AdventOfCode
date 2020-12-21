@@ -32,17 +32,17 @@ public class Day04 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
+    public String solvePart1(String puzzleInput) {
         return String.valueOf(
-                parseStringToStream(getStringFromInput(DAY))
+                parseStringToStream(getStringFromInput(puzzleInput))
                         .filter(Passport::isValidPart1)
                         .count());
     }
 
     @Override
-    public String solvePart2() {
+    public String solvePart2(String puzzleInput) {
         return String.valueOf(
-                parseStringToStream(getStringFromInput(DAY))
+                parseStringToStream(getStringFromInput(puzzleInput))
                         .filter(Passport::isValidPart2)
                         .count());
     }

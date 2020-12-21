@@ -15,7 +15,7 @@ public abstract class AbstractDay2020 extends AbstractDay {
         super(YEAR, day);
     }
 
-    public abstract String solvePart1();
-    public abstract String solvePart2();
+    public abstract String solvePart1(String puzzleInput);
+    public abstract String solvePart2(String puzzleInput);
 
 }

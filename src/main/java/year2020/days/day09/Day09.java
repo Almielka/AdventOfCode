@@ -21,14 +21,14 @@ public class Day09 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(findNumber(getListOfLongFromInput(DAY)));
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(findNumber(getListOfLongFromInput(puzzleInput)));
     }
 
     @Override
-    public String solvePart2() {
-        long numberFromPart1 = findNumber(getListOfLongFromInput(DAY));
-        return String.valueOf(findTwoNumbersThenAdd(getListOfLongFromInput(DAY), numberFromPart1));
+    public String solvePart2(String puzzleInput) {
+        long numberFromPart1 = findNumber(getListOfLongFromInput(puzzleInput));
+        return String.valueOf(findTwoNumbersThenAdd(getListOfLongFromInput(puzzleInput), numberFromPart1));
     }
 
     private long findNumber(List<Long> list) {

@@ -22,13 +22,13 @@ public class Day11 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(occupySeatingArea(getSeatingArea(getStringFromInput(DAY)), ADJACENT));
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(occupySeatingArea(getSeatingArea(getStringFromInput(puzzleInput)), ADJACENT));
     }
 
     @Override
-    public String solvePart2() {
-        return String.valueOf(occupySeatingArea(getSeatingArea(getStringFromInput(DAY)), VISIBLE));
+    public String solvePart2(String puzzleInput) {
+        return String.valueOf(occupySeatingArea(getSeatingArea(getStringFromInput(puzzleInput)), VISIBLE));
     }
 
     private Seat[][] getSeatingArea(String str) {

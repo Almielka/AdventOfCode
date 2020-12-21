@@ -21,8 +21,8 @@ public class Day06 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(Arrays.stream(getStringFromInput(DAY)
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(Arrays.stream(getStringFromInput(puzzleInput)
                 .split("\r\n\r\n"))
                 .map(v -> v.replace("\r\n", ""))
                 .mapToLong(v -> v.chars().distinct().count())
@@ -30,8 +30,8 @@ public class Day06 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart2() {
-        return String.valueOf(parseStringToStream(getStringFromInput(DAY))
+    public String solvePart2(String puzzleInput) {
+        return String.valueOf(parseStringToStream(getStringFromInput(puzzleInput))
                 .mapToInt(this::parseGroup).sum());
     }
 

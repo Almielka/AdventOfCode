@@ -23,13 +23,13 @@ public class Day10 extends AbstractDay2020 {
     }
 
     @Override
-    public String solvePart1() {
-        return String.valueOf(findTwoNumbersThenMultiply(getListOfIntegerFromInput(DAY)));
+    public String solvePart1(String puzzleInput) {
+        return String.valueOf(findTwoNumbersThenMultiply(getListOfIntegerFromInput(puzzleInput)));
     }
 
     @Override
-    public String solvePart2() {
-        return String.valueOf(countWays(getListOfIntegerFromInput(DAY)));
+    public String solvePart2(String puzzleInput) {
+        return String.valueOf(countWays(getListOfIntegerFromInput(puzzleInput)));
     }
 
     private List<Integer> correctingList(List<Integer> list) {

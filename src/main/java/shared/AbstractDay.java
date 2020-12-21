@@ -32,11 +32,11 @@ public abstract class AbstractDay {
         return day;
     }
 
-    public abstract String solvePart1();
-    public abstract String solvePart2();
+    public abstract String solvePart1(String puzzleInput);
+    public abstract String solvePart2(String puzzleInput);
 
-    public List<Integer> getListOfIntegerFromInput(int day) {
-        String fileName = getFileName(day);
+    public List<Integer> getListOfIntegerFromInput(String puzzleInput) {
+        String fileName = getFileName(puzzleInput);
         List<Integer> list = new ArrayList<>();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
             while (fileReader.ready()) {
@@ -48,16 +48,14 @@ public abstract class AbstractDay {
                     e.printStackTrace();
                 }
             }
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return list;
     }
 
-
-    public List<Long> getListOfLongFromInput(int day) {
-        String fileName = getFileName(day);
+    public List<Long> getListOfLongFromInput(String puzzleInput) {
+        String fileName = getFileName(puzzleInput);
         List<Long> list = new ArrayList<>();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
             while (fileReader.ready()) {
@@ -69,44 +67,45 @@ public abstract class AbstractDay {
                     e.printStackTrace();
                 }
             }
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return list;
     }
 
-    public List<String> getListOfStringFromInput(int day) {
-        String fileName = getFileName(day);
+    public List<String> getListOfStringFromInput(String puzzleInput) {
+        String fileName = getFileName(puzzleInput);
         List<String> list = new ArrayList<>();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
             while (fileReader.ready()) {
                 String line = fileReader.readLine();
                 list.add(line);
             }
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return list;
     }
 
-    public String getStringFromInput(int day) {
-        String fileName = getFileName(day);
+    public String getStringFromInput(String puzzleInput) {
+        String fileName = getFileName(puzzleInput);
         String getData = "";
         try {
             getData = Files.readString(Paths.get(fileName));
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return getData;
     }
 
-    private String getFileName(int day) {
-        String dayString = String.valueOf(day);
-        return INPUT.replace("00", (dayString.length() == 1) ? "0" + dayString : dayString);
+    private String getFileName(String puzzleInput) {
+        try {
+            Integer.parseInt(puzzleInput);
+            return INPUT.replace("00", (puzzleInput.length() == 1) ? "0" + puzzleInput : puzzleInput);
+        } catch (NumberFormatException e) {
+            return puzzleInput;
+        }
+
     }
 
 }
-
