@@ -1,6 +1,6 @@
 package year2020.days.day07;
 
-import year2020.days.AbstractDay;
+import year2020.days.AbstractDay2020;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -16,7 +16,7 @@ import static java.util.stream.IntStream.range;
  * 12.12.2020
  */
 
-public class Day07 extends AbstractDay {
+public class Day07 extends AbstractDay2020 {
 
     private static final int DAY = 7;
     private static final String SHINY = "shiny gold";

@@ -1,12 +1,12 @@
 package year2020.days.day02;
-import year2020.days.AbstractDay;
+import year2020.days.AbstractDay2020;
 
 /**
  * @author Anna S. Almielka
  * 07.12.2020
  */
 
-public class Day02 extends AbstractDay {
+public class Day02 extends AbstractDay2020 {
 
     private static final int DAY = 2;
 

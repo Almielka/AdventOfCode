@@ -1,8 +1,7 @@
-package year2020.days;
-
-import shared.Day;
+package shared;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,16 +14,25 @@ import java.util.List;
  * 07.12.2020
  */
 
-public abstract class AbstractDay extends Day {
-    private static final int YEAR = 2020;
-    private static final String INPUT = "src/main/resources/year2020/day-00-input.txt";
+public abstract class AbstractDay {
 
-    public AbstractDay(int day) {
-        super(YEAR, day);
+    protected int year;
+    protected int day;
+    private static final String DELIMITER = File.separator;
+    protected String INPUT;
+
+    public AbstractDay(int year, int day) {
+        this.year = year;
+        this.day = day;
+        INPUT = "src" + DELIMITER + "main" + DELIMITER + "resources" +
+                DELIMITER + "year" + year + DELIMITER + "day-00-input.txt";
+    }
+
+    public int getDay() {
+        return day;
     }
 
     public abstract String solvePart1();
-
     public abstract String solvePart2();
 
     public List<Integer> getListOfIntegerFromInput(int day) {
@@ -101,3 +109,4 @@ public abstract class AbstractDay extends Day {
     }
 
 }
+

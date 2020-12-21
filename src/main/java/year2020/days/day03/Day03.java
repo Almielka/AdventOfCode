@@ -1,6 +1,6 @@
 package year2020.days.day03;
 
-import year2020.days.AbstractDay;
+import year2020.days.AbstractDay2020;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import java.util.List;
  * 08.12.2020
  */
 
-public class Day03 extends AbstractDay {
+public class Day03 extends AbstractDay2020 {
 
     private static final int DAY = 3;
 

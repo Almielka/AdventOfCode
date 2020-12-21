@@ -1,15 +1,13 @@
 package year2020.days.day11;
 
-import year2020.days.AbstractDay;
-
-import java.util.ArrayList;
+import year2020.days.AbstractDay2020;
 
 /**
  * @author Anna S. Almielka
  * 18.12.2020
  */
 
-public class Day11 extends AbstractDay {
+public class Day11 extends AbstractDay2020 {
 
     private static final int DAY = 11;
     private static final char SEAT = 'L';

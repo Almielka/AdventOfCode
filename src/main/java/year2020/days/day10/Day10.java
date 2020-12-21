@@ -1,6 +1,6 @@
 package year2020.days.day10;
 
-import year2020.days.AbstractDay;
+import year2020.days.AbstractDay2020;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import java.util.Map;
  * 17.12.2020
  */
 
-public class Day10 extends AbstractDay {
+public class Day10 extends AbstractDay2020 {
 
     private static final int DAY = 10;
     private static final int JOLT1 = 1;

@@ -1,5 +1,6 @@
 package year2020;
 
+import shared.AbstractDay;
 import year2020.days.*;
 
 import java.lang.reflect.InvocationTargetException;
