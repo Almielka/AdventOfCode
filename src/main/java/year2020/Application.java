@@ -1,7 +1,6 @@
 package year2020;
 
 import shared.AbstractDay;
-import year2020.days.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ public class Application {
 
         List<AbstractDay> days = new ArrayList<>();
 
-        for (int i = 1; i <= 15; i++) { //i will be increased up to 25
+        for (int i = 1; i <= 16; i++) { //i will be increased up to 25
             String day = (i < 10) ? "0" + i : String.valueOf(i);
             days.add((AbstractDay) Class.forName("year2020.days.day" + day + ".Day" + day).getConstructor().newInstance());
         }
