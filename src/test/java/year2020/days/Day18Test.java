@@ -59,4 +59,39 @@ class Day18Test {
         assertThat(day.solvePart1(DAY), is(equalTo("3885386961962")));
     }
 
+    @Test
+    void testSolvePart2WithInputShort() {
+        assertThat(day.solvePart2(SHORT_INPUT), is(equalTo("231")));
+    }
+
+    @Test
+    void testSolvePart2WithInputShort2() {
+        assertThat(day.solvePart2(SHORT_INPUT2), is(equalTo("51")));
+    }
+
+    @Test
+    void testSolvePart2WithInputShort3() {
+        assertThat(day.solvePart2(SHORT_INPUT3), is(equalTo("46")));
+    }
+
+    @Test
+    void testSolvePart2WithInputShort4() {
+        assertThat(day.solvePart2(SHORT_INPUT4), is(equalTo("1445")));
+    }
+
+    @Test
+    void testSolvePart2WithInputShort5() {
+        assertThat(day.solvePart2(SHORT_INPUT5), is(equalTo("669060")));
+    }
+
+    @Test
+    void testSolvePart2WithInputShort6() {
+        assertThat(day.solvePart2(SHORT_INPUT6), is(equalTo("23340")));
+    }
+
+    @Test
+    void testSolvePart2WithInputDay() {
+        assertThat(day.solvePart2(DAY), is(equalTo("112899558798666")));
+    }
+
 }
